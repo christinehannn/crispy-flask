@@ -18,5 +18,3 @@ def send_mailgun_email(
             'text': body,
         }
     )
-    print(response.status_code)
-    print(response.content)
