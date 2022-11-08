@@ -1,16 +1,16 @@
 from flask import (
     Blueprint,
-    redirect,
-    url_for,
     flash,
+    redirect,
     render_template,
     request,
+    url_for,
 )
 from flask_login import (
     current_user,
+    login_required,
     login_user,
     logout_user,
-    login_required,
 )
 
 from flaskblog import (
@@ -18,15 +18,15 @@ from flaskblog import (
     db,
 )
 from flaskblog.models import (
-    User,
     Post,
+    User,
 )
 from flaskblog.users.forms import (
-    RegistrationForm,
     LoginForm,
-    UpdateAccountForm,
+    RegistrationForm,
     RequestResetForm,
     ResetPasswordForm,
+    UpdateAccountForm,
 )
 from flaskblog.users.utils import (
     save_picture,

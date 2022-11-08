@@ -1,7 +1,7 @@
 from flask import (
     Blueprint,
-    request,
     render_template,
+    request,
 )
 
 from flaskblog.models import Post

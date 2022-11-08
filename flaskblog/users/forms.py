@@ -1,27 +1,28 @@
 from flask_login import current_user
 from flask_wtf import FlaskForm
 from flask_wtf.file import (
-    FileField,
     FileAllowed,
+    FileField,
 )
 from wtforms import (
-    StringField,
+    BooleanField,
     PasswordField,
+    StringField,
     SubmitField,
     ValidationError,
-    BooleanField,
 )
 from wtforms.validators import (
     DataRequired,
-    Length,
     Email,
     EqualTo,
+    Length,
 )
 
 from flaskblog.models import User
 
 
 class RegistrationForm(FlaskForm):
+
     username = StringField(
         'Username',
         validators=[DataRequired(), Length(min=2, max=20)]
@@ -56,6 +57,7 @@ class RegistrationForm(FlaskForm):
 
 
 class LoginForm(FlaskForm):
+
     email = StringField(
         'Email',
         validators=[DataRequired(), Email()]
@@ -69,6 +71,7 @@ class LoginForm(FlaskForm):
 
 
 class UpdateAccountForm(FlaskForm):
+
     username = StringField(
         'Username',
         validators=[DataRequired(), Length(min=2, max=20)]

@@ -1,15 +1,15 @@
 from flask import (
+    abort,
     Blueprint,
     flash,
     redirect,
-    url_for,
     render_template,
-    abort,
     request,
+    url_for,
 )
 from flask_login import (
-    login_required,
     current_user,
+    login_required,
 )
 
 from flaskblog import db
