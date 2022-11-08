@@ -8,7 +8,7 @@ def send_mailgun_email(
     body,
     sender='No Reply <noreply@email.com>'
 ):
-    response = requests.post(
+    requests.post(
         f'{os.getenv("MAILGUN_API_BASE_URL")}/messages',
         auth=('api', os.getenv('MAILGUN_API_KEY')),
         data={
