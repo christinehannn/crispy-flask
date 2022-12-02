@@ -3,7 +3,7 @@ Web application that allows users to create a profile, upload, and edit blog pos
 
 ![PNG](documentation/images/crispy.png)
 
-![PNG](documentation/images/nevergonna.PNG)
+![PNG](documentation/images/nevergonna.png)
 
 ## Technology Stack
 Python<br>
